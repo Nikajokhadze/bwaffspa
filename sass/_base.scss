@@ -1,0 +1,25 @@
+//colors
+$color-yellow: #fde600;
+$color-green: #009247;
+$color-blue:#0756a6;
+$color-crimson: #ef374b;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.mg-t-m {margin-top: 2rem;}

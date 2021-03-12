@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: repeat(2, 50vh);
+
+    &__logo {
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &__cell {
+         background-position: 50% 50%;
+         background-size: 20%;
+         background-repeat: no-repeat;
+         background-image: url(../img/waffle.png);
+        &--1 {background-color: $color-yellow;}
+        &--2 {background-color: $color-green;}
+        &--3 {background-color: $color-blue;}
+        &--4 {background-color: $color-crimson;}
+    }
+}

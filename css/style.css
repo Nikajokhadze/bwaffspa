@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+.mg-t-m {
+  margin-top: 2rem; }
+
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, 50vh);
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 3rem;
+  background-color: rgba(117, 65, 205, 0.9); }
+  .footer > div {
+    border: 1px solid rgba(0, 0, 0, 0.4); }
+  .footer__logo img {
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    margin: 5rem auto; }
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem; }
+    .footer__info-header {
+      font-size: 1.5rem;
+      text-transform: uppercase; }
+    .footer__info-open {
+      display: flex;
+      justify-content: space-between; }
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem; }
+    .footer__contact-header {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: auto; }
+  .footer__map {
+    grid-column: 1/-1;
+    position: relative;
+    background-color: #7541CD; }
+    .footer__map::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(117, 65, 205, 0.9), rgba(117, 65, 205, 0.9));
+      cursor: pointer; }
+    .footer__map iframe {
+      width: 100%;
+      height: 100%; }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: repeat(2, 50vh); }
+  .header__logo {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  .header__cell {
+    background-position: 50% 50%;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-image: url(../img/waffle.png); }
+    .header__cell--1 {
+      background-color: #fde600; }
+    .header__cell--2 {
+      background-color: #009247; }
+    .header__cell--3 {
+      background-color: #0756a6; }
+    .header__cell--4 {
+      background-color: #ef374b; }
+
+.menu {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, [col-start] 1fr [col-end]);
+  grid-template-rows: repeat(4, 1fr); }
+  .menu--1 {
+    background-color: #fde600; }
+  .menu--2 {
+    background-color: #009247; }
+  .menu--3 {
+    background-color: #0756a6; }
+  .menu > div:not(:last-child) {
+    border: 1px solid rgba(0, 0, 0, 0.4); }
+  .menu__ingredients {
+    grid-column: col-start 1 / col-end 2;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .menu__ingredients-heading {
+      font-size: 1.5rem;
+      font-weight: 700; }
+    .menu__ingredients-list {
+      font-size: 2.5rem; }
+  .menu__ingredient-img {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .menu__ingredient-img img {
+      width: 10rem;
+      height: 10rem; }
+    .menu__ingredient-img--1 {
+      grid-column: col-start 3 / col-end 3; }
+    .menu__ingredient-img--2 {
+      grid-column: col-start 4 / col-end 4; }
+    .menu__ingredient-img--3 {
+      grid-column: col-start 5 / col-end 5; }
+  .menu__photo {
+    grid-row: 2 / -1;
+    grid-column: col-start 1 / col-end 2; }
+    .menu__photo img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+  .menu__number {
+    padding: 1.5rem; }
+  .menu__price {
+    grid-row: 2 / span 1;
+    grid-column: col-start 5 / col-end 5;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .menu__heading {
+    grid-row: 2 / -1;
+    grid-column: col-start 3 / col-end 5;
+    border: 0;
+    padding: 2rem;
+    align-self: end;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: right; }
+
+.number {
+  grid-row: 2 / span 1;
+  grid-column: col-start 3 / col-end 3;
+  font-size: 2rem;
+  font-family: sans-serif; }
+  .number span {
+    margin-right: .5rem; }
+  .number sup {
+    font-size: 1rem;
+    border-bottom: 1px solid currentColor; }
+
+.price {
+  font-size: 5rem;
+  font-family: sans-serif; }
+  .price sup {
+    font-size: 2rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 3px; }
+
+.drink {
+  display: grid;
+  grid-template-rows: repeat(2, 50vh);
+  grid-template-columns: repeat(4, 25vw);
+  background-color: #ef374b; }
+  .drink > div {
+    border: 1px solid rgba(0, 0, 0, 0.4); }
+  .drink__heading {
+    font-size: 4rem;
+    font-weight: 100;
+    padding: 2rem; }
+  .drink__menu {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem; }
+  .drink__item {
+    font-size: 4rem; }
+  .drink__price {
+    margin-top: auto; }
