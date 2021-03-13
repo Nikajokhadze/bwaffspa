@@ -5,6 +5,12 @@ $color-blue:#0756a6;
 $color-crimson: #ef374b;
 $color-purple: #7541CD;
 
+// phone 600px tab-port 900px tab-land 1200px
+
+$phone: 37.5em;
+$tab-port: 56.25em;
+$tab-land:75em;
+
 *,
 *::before,
 *::after {
@@ -15,6 +21,16 @@ $color-purple: #7541CD;
 
 html {
     font-size: 62.5%; // 1rem = 10px
+
+    @media only screen and (max-width:$tab-land) {
+        font-size: 50%; //1rem = 8px
+    }
+    @media only screen and (max-width:$tab-port) {
+        font-size: 37.5%; //1rem = 6px
+    }
+    @media only screen and (max-width:$phone) {
+        font-size: 31.25%; //1rem = 5px
+    }
 }
 
 body {
